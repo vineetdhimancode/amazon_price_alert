@@ -8,7 +8,7 @@ var authToken = process.env.TWILIO_AUTH_TOKEN;   // Your Auth Token from www.twi
 const client = require('twilio')(accountSid, authToken);
 const product = {name: '', price: '', link: ''}
 
-// const handler = setInterval(scrap, 2000)
+const handler = setInterval(scrap, 2000)
 async function scrap() {
     try {
       const {data} = await axios.get(url);
